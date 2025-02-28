@@ -240,168 +240,86 @@ body {
     50% { transform: scale(1.15) translateY(-4px); }
 }
 
-/* 90s Circular Dialer for Mobile (Bottom Center, PhonePe-Like, Rotary Phone) */
+/* Hamburger Button */
 .hamburger {
-    display: block; /* Visible on mobile */
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem; /* Larger for tap target */
-    color: var(--text-primary);
-    cursor: pointer;
-    background: var(--accent-primary);
-    border: none;
-    border-radius: 50%;
     width: 60px;
     height: 60px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 2001; /* Above theme toggle */
-}
-
-.hamburger:hover {
-    background: var(--accent-secondary);
-    transform: scale(1.1) translateX(-50%);
-    box-shadow: 0 6px 15px var(--shadow-color);
-}
-
-.hamburger.active {
-    transform: scale(1.1) translateX(-50%) rotate(90deg);
-    background: var(--accent-primary);
-    color: var(--text-primary);
-}
-
-.nav-dialer {
-    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger.active {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
+  /* Navigation Dialer */
+  .nav-dialer {
     position: fixed;
-    bottom: 80px; /* Above hamburger */
+    bottom: 100px; /* Just above the hamburger */
     left: 50%;
-    transform: translateX(-50%) scale(0);
-    width: 300px; /* Fixed size for circular dialer */
-    height: 300px; /* Fixed size for circular dialer */
-    background: transparent;
+    transform: translateX(-50%);
+    width: 300px; /* Diameter of the circular area */
+    height: 300px;
     border-radius: 50%;
+    pointer-events: none; /* Disabled until active */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
     z-index: 1000;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-    pointer-events: none; /* Disable clicks until active */
-}
-
-.nav-dialer.active {
-    display: block;
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
+  }
+  
+  .nav-dialer.active {
     pointer-events: auto;
-}
-
-.nav-dialer .nav-link {
+    opacity: 1;
+  }
+  
+  .nav-link {
     position: absolute;
     width: 80px;
     height: 80px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
     text-align: center;
-    color: var(--text-primary);
-    font-size: 0.8rem; /* Smaller for circular fit */
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transform-origin: center;
-    opacity: 0; /* Start hidden for animation */
-}
-
-.nav-dialer.active .nav-link {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform-origin: 150px 150px; /* Center of the circular area */
+  }
+  
+  .nav-link:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .nav-link:nth-child(2) { transform: rotate(51.43deg) translate(120px) rotate(-51.43deg); }
+  .nav-link:nth-child(3) { transform: rotate(102.86deg) translate(120px) rotate(-102.86deg); }
+  .nav-link:nth-child(4) { transform: rotate(154.29deg) translate(120px) rotate(-154.29deg); }
+  .nav-link:nth-child(5) { transform: rotate(205.72deg) translate(120px) rotate(-205.72deg); }
+  .nav-link:nth-child(6) { transform: rotate(257.15deg) translate(120px) rotate(-257.15deg); }
+  .nav-link:nth-child(7) { transform: rotate(308.58deg) translate(120px) rotate(-308.58deg); }
+  
+  /* Active state animations */
+  .nav-dialer.active .nav-link {
     opacity: 1;
-    animation: popIn 0.5s ease-out forwards;
-}
-
-.nav-dialer .nav-link:hover, .nav-dialer .nav-link.active {
-    background: rgba(64, 196, 255, 0.3);
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.nav-dialer .nav-link.active {
-    background: rgba(255, 107, 53, 0.3);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.nav-dialer .nav-link i {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
-}
-
-.nav-dialer .nav-link span {
-    display: block;
-    font-size: 0.7rem; /* Smaller text for circular fit */
-    white-space: nowrap;
-}
-
-/* Circular Positioning for 90s Dialer (7 items, 360° / 7 = ~51.43° per item) */
-.nav-dialer .nav-link:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); } /* Home */
-.nav-dialer .nav-link:nth-child(2) { transform: rotate(51.43deg) translate(120px) rotate(-51.43deg); } /* About */
-.nav-dialer .nav-link:nth-child(3) { transform: rotate(102.86deg) translate(120px) rotate(-102.86deg); } /* Experience */
-.nav-dialer .nav-link:nth-child(4) { transform: rotate(154.29deg) translate(120px) rotate(-154.29deg); } /* Skills */
-.nav-dialer .nav-link:nth-child(5) { transform: rotate(205.72deg) translate(120px) rotate(-205.72deg); } /* Projects */
-.nav-dialer .nav-link:nth-child(6) { transform: rotate(257.15deg) translate(120px) rotate(-257.15deg); } /* Certificates */
-.nav-dialer .nav-link:nth-child(7) { transform: rotate(308.58deg) translate(120px) rotate(-308.58deg); } /* Contact */
-
-@keyframes popIn {
-    from { transform: scale(0) rotate(0deg); opacity: 0; }
-    to { transform: scale(1) rotate(0deg); opacity: 1; }
-}
-
-/* Web Navigation (Visible, Stylish, Creative, No Overflow) */
-@media (min-width: 769px) {
-    .nav-bar {
-        padding: 1rem 0;
-    }
-
-    .nav-content {
-        padding: 0 1.5rem; /* Reduced for no overflow */
-    }
-
-    .nav-logo .logo-text {
-        font-size: 1.8rem; /* Reduced for no overflow */
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 1.5rem; /* Reduced for no overflow */
-    }
-
-    .hamburger, .nav-dialer {
-        display: none; /* Hide on desktop */
-    }
-
-    .nav-link {
-        font-size: 1rem; /* Reduced for no overflow */
-        padding: 0.5rem 0.8rem; /* Reduced for no overflow */
-    }
-
-    .nav-link i {
-        font-size: 1rem; /* Reduced for no overflow */
-    }
-
-    .nav-link:hover, .nav-link.active {
-        transform: scale(1.05) translateY(-2px);
-        background: rgba(64, 196, 255, 0.3);
-        box-shadow: 0 3px 8px var(--shadow-color);
-        animation: pulseLink 0.3s ease-out;
-    }
-
-    .nav-link.active {
-        background: rgba(255, 107, 53, 0.3);
-        box-shadow: 0 3px 8px var(--shadow-color);
-    }
-}
+    animation: fanOut 0.4s ease forwards;
+  }
+  
+  @keyframes fanOut {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+  
 
 /* Hero Section (Image-Inspired, Playful, Tech-Focused, Mobile-First) */
 .hero {

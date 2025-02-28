@@ -4,24 +4,23 @@ const navDialer = document.querySelector('.nav-dialer');
 const navLinks = document.querySelectorAll('.nav-link');
 
 hamburger.addEventListener('click', () => {
-    navDialer.classList.toggle('active');
+    // Toggle active class on hamburger and nav-dialer
     hamburger.classList.toggle('active');
+    navDialer.classList.toggle('active');
+
     if (navDialer.classList.contains('active')) {
-        // Ensure nav links reset on open
-        navLinks.forEach(link => link.classList.remove('active'));
-        // Animate dialer items for pop-in effect
-        const dialerLinks = navDialer.querySelectorAll('.nav-link');
-        dialerLinks.forEach((link, index) => {
+        // Animate dialer items for a fan-out effect
+        navLinks.forEach((link, index) => {
             setTimeout(() => {
                 link.style.opacity = '1';
-                link.style.animation = 'popIn 0.5s ease-out forwards';
-            }, index * 100); // Staggered animation
+                link.style.transform = `rotate(${index * 51.43}deg) translate(120px) rotate(-${index * 51.43}deg)`;
+            }, index * 100); // Stagger animation for each item
         });
     } else {
-        // Reset animations on close
-        navDialer.querySelectorAll('.nav-link').forEach(link => {
+        // Reset nav links to hidden state
+        navLinks.forEach((link) => {
             link.style.opacity = '0';
-            link.style.animation = 'none';
+            link.style.transform = 'none';
         });
     }
 });
@@ -34,7 +33,7 @@ document.addEventListener('click', (e) => {
         // Reset animations
         navDialer.querySelectorAll('.nav-link').forEach(link => {
             link.style.opacity = '0';
-            link.style.animation = 'none';
+            link.style.transform = 'none';
         });
     }
 });
