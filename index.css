@@ -261,7 +261,7 @@ body {
     height: calc(100% + 40px);
     border: 2px dashed var(--accent-secondary);
     border-radius: 50%;
-    animation: spinDash 5s infinite linear;
+    animation: 5s infinite linear;
 }
 
 @keyframes pulseRing {
