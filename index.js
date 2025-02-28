@@ -1,4 +1,4 @@
-// Hamburger Menu Toggle (90s Rainbow Dialer at Bottom)
+// Hamburger Menu Toggle (90s Circular Dialer at Bottom Center)
 const hamburger = document.querySelector('.hamburger');
 const navDialer = document.querySelector('.nav-dialer');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -9,6 +9,20 @@ hamburger.addEventListener('click', () => {
     if (navDialer.classList.contains('active')) {
         // Ensure nav links reset on open
         navLinks.forEach(link => link.classList.remove('active'));
+        // Animate dialer items for pop-in effect
+        const dialerLinks = navDialer.querySelectorAll('.nav-link');
+        dialerLinks.forEach((link, index) => {
+            setTimeout(() => {
+                link.style.opacity = '1';
+                link.style.animation = 'popIn 0.5s ease-out forwards';
+            }, index * 100); // Staggered animation
+        });
+    } else {
+        // Reset animations on close
+        navDialer.querySelectorAll('.nav-link').forEach(link => {
+            link.style.opacity = '0';
+            link.style.animation = 'none';
+        });
     }
 });
 
@@ -17,6 +31,11 @@ document.addEventListener('click', (e) => {
     if (window.innerWidth <= 768 && navDialer.classList.contains('active') && !navDialer.contains(e.target) && e.target !== hamburger) {
         navDialer.classList.remove('active');
         hamburger.classList.remove('active');
+        // Reset animations
+        navDialer.querySelectorAll('.nav-link').forEach(link => {
+            link.style.opacity = '0';
+            link.style.animation = 'none';
+        });
     }
 });
 
@@ -32,6 +51,8 @@ const observer = new IntersectionObserver((entries) => {
                     navDialer.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
                 }
             });
+            // Add scroll transition effect
+            entry.target.classList.add('visible');
         }
     });
 }, { threshold: 0.5 });
@@ -67,11 +88,14 @@ const revealObserver = new IntersectionObserver((entries) => {
             if (entry.target.classList.contains('skill-gauge')) {
                 entry.target.style.setProperty('--level', `${entry.target.dataset.level}%`);
             }
-            // Add scroll transition effects
-            entry.target.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+            // Add fun scroll transition effects
+            entry.target.style.transition = 'transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease';
             setTimeout(() => {
                 entry.target.style.transform = 'translateY(0) scale(1)';
                 entry.target.style.opacity = '1';
+                if (entry.target.classList.contains('exp-card') || entry.target.classList.contains('skill-item') || entry.target.classList.contains('project-card') || entry.target.classList.contains('cert-card')) {
+                    entry.target.style.boxShadow = '0 4px 12px var(--shadow-color)';
+                }
             }, 100);
             revealObserver.unobserve(entry.target);
         }
@@ -117,16 +141,18 @@ document.head.insertAdjacentHTML('beforeend', `
             transform: translateY(0) scale(1);
         }
         .hamburger.active {
-            transform: rotate(90deg);
-            color: var(--accent-primary);
+            transform: scale(1.1) translateX(-50%) rotate(90deg);
+            background: var(--accent-primary);
+            color: var(--text-primary);
         }
         /* Scroll Parallax Effect for Sections */
         .section {
-            transition: transform 0.5s ease, opacity 0.5s ease;
+            transition: transform 0.5s ease, opacity 0.5s ease, background 0.5s ease;
         }
         .section:not(.visible) {
             transform: translateY(20px) scale(0.98);
             opacity: 0.8;
+            background: rgba(var(--bg-secondary-rgb), 0.8);
         }
         /* Additional Fun Scroll Effects */
         .exp-card.visible, .skill-item.visible, .project-card.visible, .cert-card.visible {
@@ -135,6 +161,9 @@ document.head.insertAdjacentHTML('beforeend', `
         .section-title.visible {
             animation: rotateIn 0.6s ease-out;
         }
+        .reveal-text.visible {
+            animation: slideUpText 0.6s ease-out;
+        }
         @keyframes bounce {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-5px) scale(1.02); }
@@ -142,6 +171,21 @@ document.head.insertAdjacentHTML('beforeend', `
         @keyframes rotateIn {
             from { transform: translateY(-20px) rotate(-5deg); opacity: 0; }
             to { transform: translateY(0) rotate(0deg); opacity: 1; }
+        }
+        @keyframes slideUpText {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Parallax Scroll for Background */
+        body {
+            background-attachment: fixed;
+            background-position: center;
+            transition: background-position 0.5s ease;
+        }
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
         }
     </style>
 `);
