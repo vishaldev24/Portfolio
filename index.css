@@ -296,14 +296,6 @@ body {
     transform: translateX(-50%) scale(1);
     opacity: 1;
     pointer-events: auto;
-    animation: rotateDialer 1.5s ease-out infinite, rainbowFade 3s ease-in-out infinite; /* 90s rotary phone effect */
-}
-
-@keyframes rainbowFade {
-    0%, 100% { background: var(--shape-color-1); }
-    25% { background: var(--shape-color-2); }
-    50% { background: var(--shape-color-3); }
-    75% { background: var(--accent-primary); }
 }
 
 .nav-dialer .nav-link {
