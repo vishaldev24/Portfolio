@@ -1,18 +1,18 @@
 :root {
-    /* Default Mode Variables (Nike-Inspired, Eco-Conscious 2025 Aesthetic) */
-    --bg-primary: #0d1b2a; /* Deep charcoal for modern, eco base */
-    --bg-secondary: #1a2a3a; /* Dark slate for cards, subtle eco tone */
-    --text-primary: #e0e8f0; /* Soft white for readability */
+    /* Default Mode Variables (Nike-Inspired, Tech-Focused 2025 Aesthetic) */
+    --bg-primary: #0d1b2a; /* Deep charcoal for modern tech base */
+    --bg-secondary: #1a2a3a; /* Dark slate for cards, tech tone */
+    --text-primary: #ffffff; /* Bright white for readability */
     --text-secondary: #a2b5c0; /* Light gray for secondary text */
     --accent-primary: #ff6b35; /* Vibrant orange, Nike-inspired for energy (ATS keyword-friendly) */
     --accent-secondary: #40c4ff; /* Bright cyan, tech-inspired for contrast */
     --button-hover: #5ddcff; /* Light cyan for interactivity */
     --shadow-color: rgba(255, 107, 53, 0.2); /* Soft orange shadow for focus */
     --gauge-fill: #ff6b35; /* Orange for skill gauges, ATS-relevant */
-    --background-pattern: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(26, 42, 58, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Subtle grid, Nike-like tech pattern */
+    --background-pattern: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(26, 42, 58, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.08"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Bold grid, Nike-like tech pattern */
     --layout-transform: none;
     --card-radius: 12px; /* Sleek, Nike-inspired curves */
-    --animation-duration: 0.8s; /* Consistent animation speed */
+    --animation-duration: 0.6s; /* Faster animations for Nike-like speed */
 }
 
 [data-theme="light"] {
@@ -25,7 +25,7 @@
     --button-hover: #5ddcff; /* Light cyan for hover */
     --shadow-color: rgba(255, 107, 53, 0.1); /* Softer orange shadow */
     --gauge-fill: #ff6b35; /* Orange for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 250, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.03"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Lighter, subtle grid */
+    --background-pattern: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 250, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Lighter, subtle grid */
     --layout-transform: none;
     --card-radius: 10px; /* Slightly smaller curves for light mode */
 }
@@ -33,14 +33,14 @@
 [data-theme="dark"] {
     --bg-primary: #000000; /* Pure black for dark mode */
     --bg-secondary: #16222f; /* Darker slate for cards */
-    --text-primary: #e0e8f0; /* Light gray for readability */
+    --text-primary: #ffffff; /* Bright white for readability */
     --text-secondary: #8298a8; /* Medium gray for secondary text */
     --accent-primary: #00ff88; /* Neon green, Nike-inspired energy */
     --accent-secondary: #a855f7; /* Purple, tech-inspired contrast */
     --button-hover: #d8b4fe; /* Light purple for hover */
     --shadow-color: rgba(0, 255, 136, 0.2); /* Soft green shadow */
     --gauge-fill: #00ff88; /* Neon green for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 34, 47, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%23a855f7" fill-opacity="0.03"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Darker, subtle grid */
+    --background-pattern: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 34, 47, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%23a855f7" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Darker, subtle grid */
     --layout-transform: none;
     --card-radius: 14px; /* Larger curves for dark mode */
 }
@@ -63,11 +63,11 @@ body {
     line-height: 1.6; /* Improved readability for ATS */
 }
 
-/* Theme Toggle (Nike-Inspired, Minimal) */
+/* Theme Toggle (Nike-Inspired, Non-Overlapping Mobile) */
 .theme-toggle {
     position: fixed;
     top: 15px;
-    right: 15px;
+    right: 60px; /* Adjusted to avoid overlapping hamburger on mobile */
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -124,7 +124,7 @@ body {
     to { transform: translateX(0); opacity: 1; }
 }
 
-/* Navigation (Mobile-First, Nike-Inspired) */
+/* Navigation (Mobile-First, Trendy Nike-Inspired) */
 .nav-bar {
     position: fixed;
     top: 0;
@@ -133,7 +133,7 @@ body {
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .nav-content {
@@ -163,6 +163,7 @@ body {
     display: none; /* Hidden by default on mobile */
     list-style: none;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-link {
@@ -170,7 +171,11 @@ body {
     color: var(--text-secondary);
     font-size: 1rem; /* Mobile-first size */
     font-weight: 500;
+    position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -193,8 +198,33 @@ body {
     width: 100%;
 }
 
-.nav-indicator {
-    display: none; /* Removed for simplicity, Nike-inspired minimalism */
+.nav-link i {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover i, .nav-link.active i {
+    color: var(--accent-secondary);
+}
+
+/* Trendy Nike-Inspired Nav Icons (Like Image) */
+.nav-links .nav-link {
+    background: rgba(255, 255, 255, 0.1); /* Subtle overlay for icons */
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+    background: rgba(64, 196, 255, 0.2); /* Cyan overlay, Nike-like */
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.nav-link.active {
+    background: rgba(255, 107, 53, 0.2); /* Orange overlay for active state */
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 /* Hamburger Menu for Mobile (Nike-Inspired) */
@@ -207,6 +237,7 @@ body {
     border: none;
     padding: 0.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 2001; /* Above theme toggle */
 }
 
 .hamburger:hover {
@@ -224,18 +255,31 @@ body {
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .nav-menu.active {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
     animation: slideDown 0.3s ease-out;
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.nav-menu .nav-link {
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.nav-menu .nav-link:hover {
+    background: rgba(64, 196, 255, 0.2);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 /* Hero Section (Nike-Inspired, Attention-Grabbing, Mobile-First) */
@@ -264,6 +308,8 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     animation: fadeIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-text {
@@ -275,7 +321,7 @@ body {
     font-weight: 700;
     color: var(--accent-primary);
     opacity: 0;
-    animation: slideUp 1.2s ease-out forwards;
+    animation: slideUp 0.6s ease-out forwards;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,7 +329,7 @@ body {
     font-size: 1.2rem; /* Mobile-first size */
     color: var(--text-secondary);
     margin: 0.8rem 0 1.2rem;
-    animation: slideUp 1.2s ease-out 0.4s forwards;
+    animation: slideUp 0.6s ease-out 0.3s forwards;
 }
 
 @keyframes slideUp {
@@ -311,7 +357,7 @@ body {
 
 @keyframes pulseBg {
     0%, 100% { background: var(--bg-secondary); }
-    50% { background: rgba(64, 196, 255, 0.1); }
+    50% { background: rgba(64, 196, 255, 0.2); }
 }
 
 .cta-buttons {
@@ -344,6 +390,14 @@ body {
     box-shadow: 0 4px 12px var(--shadow-color);
 }
 
+.btn i {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: scale(1.2);
+}
+
 .hero-avatar {
     width: 150px; /* Mobile-first size */
     height: 150px;
@@ -360,6 +414,11 @@ body {
     object-fit: cover;
     border-radius: var(--card-radius);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover img {
+    transform: scale(1.1);
 }
 
 @keyframes float {
@@ -367,7 +426,7 @@ body {
     50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* Sections (Mobile-First, Nike-Inspired, Simple yet Dynamic) */
+/* Sections (Mobile-First, Nike-Inspired, Dynamic) */
 .section {
     padding: 4rem 1rem; /* Mobile-first padding */
     max-width: 100%;
@@ -378,7 +437,7 @@ body {
     flex-direction: column;
     justify-content: center;
     transform: var(--layout-transform);
-    animation: fadeInSection 1s ease-out;
+    animation: fadeInSection 0.6s ease-out;
 }
 
 @keyframes fadeInSection {
@@ -394,7 +453,7 @@ body {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: slideInTitle 0.8s ease-out;
+    animation: slideInTitle 0.6s ease-out;
     background: var(--bg-secondary);
     padding: 0.8rem 1.5rem;
     border-radius: var(--card-radius);
@@ -412,7 +471,7 @@ body {
     padding: 1.5rem; /* Mobile-first padding */
     border-radius: var(--card-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: scaleIn 0.8s ease-out;
+    animation: scaleIn 0.6s ease-out;
 }
 
 @keyframes scaleIn {
@@ -424,6 +483,12 @@ body {
     font-size: 1rem; /* Mobile-first size */
     margin-bottom: 1rem;
     line-height: 1.6;
+    animation: fadeInText 0.6s ease-out;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Experience */
@@ -441,7 +506,7 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, background 0.4s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 0.6s ease-out;
 }
 
 .exp-card::before {
@@ -462,7 +527,7 @@ body {
 
 .exp-card:hover {
     transform: scale(1.05); /* Nike-inspired elevation */
-    background: rgba(64, 196, 255, 0.1); /* Cyan overlay, Nike-like */
+    background: rgba(64, 196, 255, 0.2); /* Cyan overlay, Nike-like */
     box-shadow: 0 4px 12px var(--shadow-color);
 }
 
@@ -493,7 +558,7 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: zoomIn 0.8s ease-out;
+    animation: zoomIn 0.6s ease-out;
 }
 
 .skill-item:hover {
@@ -529,7 +594,7 @@ body {
     background: conic-gradient(var(--gauge-fill) 0% var(--level), #334155 0%);
     border-radius: 50%;
     clip-path: circle(50% at 50% 50%);
-    transition: all 1.2s ease-in-out;
+    transition: all 0.6s ease-in-out; /* Faster for Nike-like speed */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 12px var(--gauge-fill, #ff6b35);
 }
 
@@ -579,12 +644,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: slideRight 0.8s ease-out;
+    animation: slideRight 0.6s ease-out;
 }
 
 .cert-card:hover {
     transform: scale(1.05); /* Nike-inspired elevation */
-    background: rgba(64, 196, 255, 0.1); /* Cyan overlay */
+    background: rgba(64, 196, 255, 0.2); /* Cyan overlay */
     box-shadow: 0 4px 12px var(--shadow-color);
 }
 
@@ -598,11 +663,12 @@ body {
     border-radius: var(--card-radius);
     margin-bottom: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cert-img:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .cert-card p {
@@ -629,7 +695,7 @@ body {
     transition: all 0.3s ease;
     background: var(--bg-secondary);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: bounceIn 0.8s ease-out;
+    animation: bounceIn 0.6s ease-out;
 }
 
 @keyframes bounceIn {
@@ -668,18 +734,13 @@ body {
     font-size: 1.2rem; /* Mobile-first size */
     color: var(--accent-secondary);
     margin-bottom: 0.5rem;
-    animation: fadeInText 0.8s ease-out;
+    animation: fadeInText 0.6s ease-out;
 }
 
 .project-teaser {
     font-size: 0.9rem; /* Mobile-first size */
     color: var(--text-secondary);
-    animation: fadeInText 0.8s ease-out 0.2s;
-}
-
-@keyframes fadeInText {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    animation: fadeInText 0.6s ease-out 0.2s;
 }
 
 .project-details {
@@ -702,7 +763,7 @@ body {
 .project-details p {
     font-size: 0.9rem; /* Mobile-first size */
     margin-bottom: 0.8rem;
-    animation: fadeInText 0.8s ease-out 0.4s;
+    animation: fadeInText 0.6s ease-out 0.4s;
 }
 
 .project-link {
@@ -730,7 +791,7 @@ body {
     border-radius: var(--card-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transform: rotate(-var(--layout-transform));
-    animation: fadeInSection 1s ease-out;
+    animation: fadeInSection 0.6s ease-out;
 }
 
 .contact-details {
@@ -750,7 +811,7 @@ body {
     border-radius: var(--card-radius);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    animation: slideLeft 0.8s ease-out;
+    animation: slideLeft 0.6s ease-out;
 }
 
 .contact-details p:hover {
@@ -768,7 +829,7 @@ body {
     gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
-    animation: fadeIn 1s ease-out 0.2s;
+    animation: fadeIn 0.6s ease-out 0.2s;
 }
 
 .social-btn {
@@ -806,7 +867,7 @@ body {
     font-size: 1rem; /* Mobile-first size */
     transition: all 0.3s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 0.6s ease-out;
 }
 
 [data-theme="light"] .contact-form input,
