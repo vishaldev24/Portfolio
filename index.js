@@ -345,3 +345,10 @@ document.head.insertAdjacentHTML('beforeend', `
 
 document.documentElement.style.setProperty('--particle-color', `hsl(${Math.random() * 60 + 180}, 100%, 50%)`);
 document.documentElement.style.setProperty('--code-color', `hsl(${Math.random() * 60 + 180}, 100%, 60%)`);
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
