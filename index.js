@@ -342,3 +342,6 @@ document.head.insertAdjacentHTML('beforeend', `
         }
     </style>
 `);
+
+document.documentElement.style.setProperty('--particle-color', `hsl(${Math.random() * 60 + 180}, 100%, 50%)`);
+document.documentElement.style.setProperty('--code-color', `hsl(${Math.random() * 60 + 180}, 100%, 60%)`);
