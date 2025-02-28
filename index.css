@@ -1,1090 +1,132 @@
+/* Modern Futuristic Portfolio Styles - 2025 Version */
+
+/* Global Styles */
 :root {
-    /* Default Mode Variables (Nike-Inspired, Tech-Focused 2025 Aesthetic) */
-    --bg-primary: #0d1b2a; /* Deep charcoal for modern tech base */
-    --bg-secondary: #1a2a3a; /* Dark slate for cards, tech tone */
-    --text-primary: #ffffff; /* Bright white for readability */
-    --text-secondary: #a2b5c0; /* Light gray for secondary text */
-    --accent-primary: #ff6b35; /* Vibrant orange, Nike-inspired for energy (ATS keyword-friendly) */
-    --accent-secondary: #40c4ff; /* Bright cyan, tech-inspired for contrast */
-    --button-hover: #5ddcff; /* Light cyan for interactivity */
-    --shadow-color: rgba(255, 107, 53, 0.2); /* Soft orange shadow for focus */
-    --gauge-fill: #ff6b35; /* Orange for skill gauges, ATS-relevant */
-    --background-pattern: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(26, 42, 58, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.08"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Bold grid, Nike-like tech pattern */
-    --layout-transform: none;
-    --card-radius: 12px; /* Sleek, Nike-inspired curves */
-    --animation-duration: 0.6s; /* Faster animations for Nike-like speed */
-}
-
-[data-theme="light"] {
-    --bg-primary: #ffffff; /* Bright white for light mode */
-    --bg-secondary: #f5f7fa; /* Light gray for cards */
-    --text-primary: #1a2a3a; /* Dark slate for contrast */
-    --text-secondary: #718096; /* Medium gray for secondary text */
-    --accent-primary: #ff6b35; /* Vibrant orange */
-    --accent-secondary: #40c4ff; /* Bright cyan */
-    --button-hover: #5ddcff; /* Light cyan for hover */
-    --shadow-color: rgba(255, 107, 53, 0.1); /* Softer orange shadow */
-    --gauge-fill: #ff6b35; /* Orange for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 250, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Lighter, subtle grid */
-    --layout-transform: none;
-    --card-radius: 10px; /* Slightly smaller curves for light mode */
-}
-
-[data-theme="dark"] {
-    --bg-primary: #000000; /* Pure black for dark mode */
-    --bg-secondary: #16222f; /* Darker slate for cards */
-    --text-primary: #ffffff; /* Bright white for readability */
-    --text-secondary: #8298a8; /* Medium gray for secondary text */
-    --accent-primary: #00ff88; /* Neon green, Nike-inspired energy */
-    --accent-secondary: #a855f7; /* Purple, tech-inspired contrast */
-    --button-hover: #d8b4fe; /* Light purple for hover */
-    --shadow-color: rgba(0, 255, 136, 0.2); /* Soft green shadow */
-    --gauge-fill: #00ff88; /* Neon green for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 34, 47, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%23a855f7" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Darker, subtle grid */
-    --layout-transform: none;
-    --card-radius: 14px; /* Larger curves for dark mode */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    --primary-color: #0ff; /* Neon cyan */
+    --secondary-color: #ff00ff; /* Neon magenta */
+    --background-color: #080808;
+    --text-color: #e0e0e0;
+    --glass-effect: rgba(255, 255, 255, 0.1);
+    --border-glow: 0 0 15px var(--primary-color);
 }
 
 body {
-    background: var(--background-pattern);
-    background-size: cover;
-    background-attachment: fixed;
-    color: var(--text-primary);
-    overflow-x: hidden;
-    position: relative;
-    transition: background 0.5s ease, color 0.5s ease;
-    line-height: 1.6; /* Improved readability for ATS */
-}
-
-/* Theme Toggle (Nike-Inspired, Non-Overlapping Mobile) */
-.theme-toggle {
-    position: fixed;
-    top: 15px;
-    right: 60px; /* Adjusted to avoid overlapping hamburger on mobile */
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-#theme-btn {
-    background: var(--accent-primary);
-    color: #fff;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#theme-btn:hover {
-    background: var(--accent-secondary);
-    transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 4px 10px var(--shadow-color);
-}
-
-.theme-indicator {
-    background: var(--bg-secondary);
-    color: var(--text-primary);
-    padding: 0.4rem 0.8rem;
-    border-radius: var(--card-radius);
-    font-size: 0.9rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateX(15px);
-    transition: all 0.3s ease;
-    position: absolute;
-    right: 45px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.theme-indicator.active {
-    opacity: 1;
-    transform: translateX(0);
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(15px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-/* Navigation (Mobile-First, Trendy Nike-Inspired) */
-.nav-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem; /* Mobile-first padding */
-}
-
-.nav-logo .logo-text {
-    font-size: 1.5rem; /* Mobile-first size */
-    font-weight: 700;
-    color: var(--accent-primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-logo .logo-text:hover {
-    color: var(--accent-secondary);
-    transform: scale(1.05);
-}
-
-.nav-links {
-    display: none; /* Hidden by default on mobile */
-    list-style: none;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 1rem; /* Mobile-first size */
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--accent-primary);
-    transform: scale(1.05) translateY(-2px);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: var(--accent-primary);
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
-}
-
-.nav-link i {
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover i, .nav-link.active i {
-    color: var(--accent-secondary);
-}
-
-/* Trendy Nike-Inspired Nav Icons (Like Image) */
-.nav-links .nav-link {
-    background: rgba(255, 255, 255, 0.1); /* Subtle overlay for icons */
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.nav-links .nav-link:hover {
-    background: rgba(64, 196, 255, 0.2); /* Cyan overlay, Nike-like */
-    transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.nav-link.active {
-    background: rgba(255, 107, 53, 0.2); /* Orange overlay for active state */
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-/* Hamburger Menu for Mobile (Nike-Inspired) */
-.hamburger {
-    display: block; /* Visible on mobile */
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    z-index: 2001; /* Above theme toggle */
-}
-
-.hamburger:hover {
-    color: var(--accent-primary);
-    transform: scale(1.1);
-}
-
-.nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.nav-menu.active {
-    display: flex;
-    animation: slideDown 0.3s ease-out;
-}
-
-.nav-menu .nav-link {
-    padding: 0.8rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 1.1rem;
-}
-
-.nav-menu .nav-link:hover {
-    background: rgba(64, 196, 255, 0.2);
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-/* Hero Section (Nike-Inspired, Attention-Grabbing, Mobile-First) */
-.hero {
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh; /* Full viewport for mobile */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: var(--layout-transform);
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column; /* Mobile-first stack */
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 100%;
-    padding: 1rem;
-    z-index: 2;
-    background: var(--bg-secondary);
-    border-radius: var(--card-radius);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    animation: fadeIn 1s ease-out;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-text {
-    width: 100%;
-}
-
-.reveal-text {
-    font-size: 2rem; /* Mobile-first size */
-    font-weight: 700;
-    color: var(--accent-primary);
-    opacity: 0;
-    animation: slideUp 0.6s ease-out forwards;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.reveal-text:nth-child(2) {
-    font-size: 1.2rem; /* Mobile-first size */
-    color: var(--text-secondary);
-    margin: 0.8rem 0 1.2rem;
-    animation: slideUp 0.6s ease-out 0.3s forwards;
-}
-
-@keyframes slideUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-.role-marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 1rem; /* Mobile-first size */
-    color: var(--text-primary);
-    background: var(--bg-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: var(--card-radius);
-    animation: marquee 15s linear infinite, pulseBg 3s infinite ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-@keyframes pulseBg {
-    0%, 100% { background: var(--bg-secondary); }
-    50% { background: rgba(64, 196, 255, 0.2); }
-}
-
-.cta-buttons {
-    display: flex;
-    flex-direction: column; /* Mobile-first stack */
-    gap: 1rem;
-    width: 100%;
-}
-
-.btn {
-    background: linear-gradient(45deg, var(--accent-primary), #fb923c);
-    color: #fff;
-    padding: 0.8rem 1.5rem; /* Mobile-first size */
-    border: none;
-    border-radius: var(--card-radius);
-    font-size: 1rem; /* Mobile-first size */
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    width: 100%; /* Full width on mobile */
-}
-
-.btn:hover {
-    background: linear-gradient(45deg, var(--accent-secondary), var(--button-hover));
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.btn i {
-    transition: transform 0.3s ease;
-}
-
-.btn:hover i {
-    transform: scale(1.2);
-}
-
-.hero-avatar {
-    width: 150px; /* Mobile-first size */
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    animation: float 4s infinite ease-in-out;
-}
-
-.hero-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--card-radius);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.hero-avatar:hover img {
-    transform: scale(1.1);
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
-}
-
-/* Sections (Mobile-First, Nike-Inspired, Dynamic) */
-.section {
-    padding: 4rem 1rem; /* Mobile-first padding */
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    min-height: 80vh; /* Reduced for mobile */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: var(--layout-transform);
-    animation: fadeInSection 0.6s ease-out;
-}
-
-@keyframes fadeInSection {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.section-title {
-    font-size: 2rem; /* Mobile-first size */
-    font-weight: 700;
-    color: var(--accent-secondary);
-    text-align: center;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    animation: slideInTitle 0.6s ease-out;
-    background: var(--bg-secondary);
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--card-radius);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes slideInTitle {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* About */
-.about-content {
-    background: var(--bg-secondary);
-    padding: 1.5rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: scaleIn 0.6s ease-out;
-}
-
-@keyframes scaleIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.about-content p {
-    font-size: 1rem; /* Mobile-first size */
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    animation: fadeInText 0.6s ease-out;
-}
-
-@keyframes fadeInText {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Experience */
-.exp-container {
-    display: grid;
-    gap: 1.5rem; /* Mobile-first gap */
-    transform: rotate(-var(--layout-transform));
-}
-
-.exp-card {
-    background: var(--bg-secondary);
-    padding: 1.5rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, background 0.4s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.6s ease-out;
-}
-
-.exp-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, var(--shadow-color), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.exp-card:hover::before {
-    opacity: 0.3; /* Subtle Nike-inspired glow */
-}
-
-.exp-card:hover {
-    transform: scale(1.05); /* Nike-inspired elevation */
-    background: rgba(64, 196, 255, 0.2); /* Cyan overlay, Nike-like */
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.exp-card h3 {
-    font-size: 1.5rem; /* Mobile-first size */
-    color: var(--accent-secondary);
-    margin-bottom: 0.5rem;
-}
-
-.exp-meta {
-    font-size: 0.9rem; /* Mobile-first size */
-    color: var(--text-secondary);
-    margin-bottom: 0.8rem;
-}
-
-/* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.5rem; /* Mobile-first gap */
-    transform: rotate(-var(--layout-transform));
-}
-
-.skill-item {
-    background: var(--bg-secondary);
-    padding: 1.5rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: zoomIn 0.6s ease-out;
-}
-
-.skill-item:hover {
-    transform: scale(1.05) translateY(-5px); /* Nike-inspired lift */
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.skill-item h3 {
-    font-size: 1.2rem; /* Mobile-first size */
-    color: var(--accent-primary);
-    margin-bottom: 0.8rem;
-}
-
-.skill-gauge {
-    width: 100px; /* Reduced for mobile */
-    height: 100px; /* Reduced for mobile */
-    margin: 0 auto 1rem;
-    position: relative;
-    transform: rotate(-90deg);
-}
-
-.gauge-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: conic-gradient(var(--gauge-fill) 0% var(--level), #334155 0%);
-    border-radius: 50%;
-    clip-path: circle(50% at 50% 50%);
-    transition: all 0.6s ease-in-out; /* Faster for Nike-like speed */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 12px var(--gauge-fill, #ff6b35);
-}
-
-[data-theme="light"] .gauge-fill {
-    background: conic-gradient(var(--gauge-fill) 0% var(--level), #e2e8f0 0%);
-}
-
-[data-theme="dark"] .gauge-fill {
-    background: conic-gradient(var(--gauge-fill) 0% var(--level), #4b5563 0%);
-}
-
-.gauge-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    font-size: 0.8rem; /* Mobile-first size */
-    color: var(--text-primary);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item ul {
-    list-style: none;
-    font-size: 0.9rem; /* Mobile-first size */
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
     padding: 0;
 }
 
-/* Certificates */
-.certificates {
-    background: var(--bg-primary);
-}
-
-.certificates-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.5rem; /* Mobile-first gap */
-    transform: rotate(-var(--layout-transform));
-}
-
-.cert-card {
-    background: var(--bg-secondary);
-    padding: 1.5rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background 0.4s ease;
+/* Navbar */
+.navbar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: slideRight 0.6s ease-out;
-}
-
-.cert-card:hover {
-    transform: scale(1.05); /* Nike-inspired elevation */
-    background: rgba(64, 196, 255, 0.2); /* Cyan overlay */
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-@keyframes slideRight {
-    from { transform: translateX(-20px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.cert-img {
-    max-width: 150px; /* Mobile-first size */
-    border-radius: var(--card-radius);
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.cert-card p {
-    font-size: 0.9rem; /* Mobile-first size */
-    color: var(--text-secondary);
-    text-align: center;
-    max-width: 100%;
-    line-height: 1.5;
-}
-
-/* Projects */
-.project-showcase {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 1.5rem; /* Mobile-first gap */
-    transform: rotate(-var(--layout-transform));
-}
-
-.project-card {
-    position: relative;
-    height: 300px; /* Reduced for mobile */
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background: var(--bg-secondary);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    animation: bounceIn 0.6s ease-out;
-}
-
-@keyframes bounceIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Nike-inspired elevation */
-    box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.project-img {
-    width: 100%;
-    height: 60%;
-    background-size: cover;
-    background-position: center;
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.project-card:hover .project-img {
-    filter: blur(2px) brightness(0.7);
-    transform: scale(1.05);
-}
-
-.project-info {
-    padding: 1rem; /* Mobile-first padding */
-    height: 40%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    background: var(--bg-secondary);
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.project-info h3 {
-    font-size: 1.2rem; /* Mobile-first size */
-    color: var(--accent-secondary);
-    margin-bottom: 0.5rem;
-    animation: fadeInText 0.6s ease-out;
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
 
-.project-teaser {
-    font-size: 0.9rem; /* Mobile-first size */
-    color: var(--text-secondary);
-    animation: fadeInText 0.6s ease-out 0.2s;
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-.project-details {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .project-details {
-    opacity: 1;
-    transform: translateY(0);
-    animation: slideUpDetails 0.3s ease-out;
-}
-
-@keyframes slideUpDetails {
-    from { transform: translateY(15px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.project-details p {
-    font-size: 0.9rem; /* Mobile-first size */
-    margin-bottom: 0.8rem;
-    animation: fadeInText 0.6s ease-out 0.4s;
-}
-
-.project-link {
-    color: var(--accent-primary);
+.navbar ul li a {
     text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-    font-size: 0.9rem; /* Mobile-first size */
-    transition: all 0.3s ease;
+    color: var(--text-color);
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s;
 }
 
-.project-link:hover {
-    text-decoration: underline;
-    color: var(--accent-secondary);
-    transform: scale(1.1);
+.navbar ul li a:hover {
+    color: var(--primary-color);
 }
 
-/* Contact */
-.contact-grid {
-    display: flex; /* Mobile-first single column */
-    flex-direction: column;
-    gap: 1.5rem; /* Mobile-first gap */
-    background: var(--bg-secondary);
-    padding: 1.5rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transform: rotate(-var(--layout-transform));
-    animation: fadeInSection 0.6s ease-out;
+.navbar ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
 }
 
-.contact-details p {
-    font-size: 1rem; /* Mobile-first size */
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    background: var(--bg-secondary);
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--card-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    animation: slideLeft 0.6s ease-out;
-}
-
-.contact-details p:hover {
-    transform: scale(1.02) translateY(-2px);
-    box-shadow: 0 2px 6px var(--shadow-color);
-}
-
-@keyframes slideLeft {
-    from { transform: translateX(-20px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: center;
-    animation: fadeIn 0.6s ease-out 0.2s;
-}
-
-.social-btn {
-    background: var(--accent-primary);
-    color: #fff;
-    width: 35px; /* Mobile-first size */
-    height: 35px; /* Mobile-first size */
-    border-radius: 50%;
+/* Hero Section */
+.hero {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem; /* Mobile-first size */
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background: linear-gradient(135deg, #0ff 0%, #ff00ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.social-btn:hover {
-    background: var(--accent-secondary);
-    transform: scale(1.1);
-    box-shadow: 0 2px 6px var(--shadow-color);
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form input, .contact-form textarea {
-    background: var(--bg-secondary);
-    border: 1px solid var(--card-border);
-    padding: 0.8rem; /* Mobile-first padding */
-    border-radius: var(--card-radius);
-    color: var(--text-primary);
-    font-size: 1rem; /* Mobile-first size */
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.6s ease-out;
-}
-
-[data-theme="light"] .contact-form input,
-[data-theme="light"] .contact-form textarea {
-    background: #f5f7fa;
-    border-color: #e2e8f0;
-    color: #1a2a3a;
-}
-
-[data-theme="dark"] .contact-form input,
-[data-theme="dark"] .contact-form textarea {
-    background: #16222f;
-    border-color: #4a5568;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: var(--accent-primary);
-    box-shadow: 0 0 8px var(--shadow-color), 0 0 4px rgba(255, 255, 255, 0.2);
-    outline: none;
-    transform: scale(1.02);
-    animation: pulseInput 0.3s ease-out;
-}
-
-@keyframes pulseInput {
-    0%, 100% { transform: scale(1.02); }
-    50% { transform: scale(1.04); }
-}
-
-/* Desktop and Tablet Media Queries (Scaling Up, Nike-Inspired) */
-@media (min-width: 769px) { /* Tablet and Desktop */
-    .nav-bar {
-        padding: 1.5rem 0;
-    }
-
-    .nav-content {
-        padding: 0 2rem;
-    }
-
-    .nav-logo .logo-text {
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero {
         font-size: 2.5rem;
     }
-
-    .nav-links {
-        display: flex; /* Show nav links on desktop/tablet */
-        gap: 2.5rem;
+    .navbar ul {
+        gap: 15px;
     }
-
-    .hamburger {
-        display: none; /* Hide hamburger on desktop/tablet */
+    .navbar ul li a {
+        font-size: 16px;
     }
+}
 
-    .nav-link {
-        font-size: 1.2rem;
-    }
-
+@media (max-width: 768px) {
     .hero {
-        min-height: 100vh;
-    }
-
-    .hero-content {
-        flex-direction: row; /* Horizontal on desktop/tablet */
-        padding: 2rem;
-        gap: 6rem;
-        max-width: 1200px;
-    }
-
-    .hero-text {
-        text-align: left;
-        width: auto;
-    }
-
-    .reveal-text {
-        font-size: 5rem;
-    }
-
-    .reveal-text:nth-child(2) {
         font-size: 2rem;
     }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+}
 
-    .role-marquee {
+@media (max-width: 480px) {
+    .hero {
         font-size: 1.5rem;
-        padding: 0.8rem 1.5rem;
+        padding: 20px;
     }
-
-    .cta-buttons {
-        flex-direction: row; /* Horizontal on desktop/tablet */
-        width: auto;
-    }
-
-    .btn {
-        padding: 1rem 2.5rem;
-        font-size: 1.3rem;
-        width: auto;
-    }
-
-    .hero-avatar {
-        width: 300px;
-        height: 300px;
-    }
-
-    .section {
-        padding: 6rem 2rem; /* Increased padding for desktop */
-        max-width: 1200px;
-    }
-
-    .section-title {
-        font-size: 3.5rem;
-        padding: 1rem 2.5rem;
-    }
-
-    .about-content {
-        padding: 2.5rem;
-    }
-
-    .about-content p {
-        font-size: 1.2rem;
-    }
-
-    .exp-container {
-        gap: 2.5rem;
-    }
-
-    .exp-card {
-        padding: 2rem;
-    }
-
-    .exp-card h3 {
-        font-size: 2rem;
-    }
-
-    .exp-meta {
-        font-size: 1.1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Multiple columns on desktop */
-        gap: 2.5rem;
-    }
-
-    .skill-item {
-        padding: 2rem;
-    }
-
-    .skill-item h3 {
-        font-size: 1.5rem;
-    }
-
-    .skill-gauge {
-        width: 120px;
-        height: 120px;
-    }
-
-    .gauge-label {
-        font-size: 1rem;
-    }
-
-    .skill-item ul {
-        font-size: 1.1rem;
-    }
-
-    .certificates-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Multiple columns on desktop */
-        gap: 2.5rem;
-    }
-
-    .cert-card {
-        padding: 2rem;
-    }
-
-    .cert-img {
-        max-width: 200px;
-    }
-
-    .cert-card p {
-        font-size: 1.1rem;
-    }
-
-    .project-showcase {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Multiple columns on desktop */
-        gap: 2.5rem;
-    }
-
-    .project-card {
-        height: 400px;
-    }
-
-    .project-info {
-        padding: 1.5rem;
-    }
-
-    .project-info h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-teaser, .project-details p, .project-link {
-        font-size: 1rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr 1fr; /* Two columns on desktop */
-        gap: 2.5rem;
-        padding: 2.5rem;
-    }
-
-    .contact-details p {
-        font-size: 1.2rem;
-        padding: 0.6rem 1rem;
-    }
-
-    .social-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
-
-    .contact-form input, .contact-form textarea {
-        padding: 1rem;
-        font-size: 1.1rem;
+    .navbar .brand {
+        font-size: 20px;
     }
 }
