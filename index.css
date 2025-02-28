@@ -1,17 +1,18 @@
 :root {
-    /* Default Mode Variables (Eco-Conscious, 2025 Aesthetic) */
-    --bg-primary: #0d1b2a; /* Deep charcoal for modern, eco-friendly base */
+    /* Default Mode Variables (Nike-Inspired, Eco-Conscious 2025 Aesthetic) */
+    --bg-primary: #0d1b2a; /* Deep charcoal for modern, eco base */
     --bg-secondary: #1a2a3a; /* Dark slate for cards, subtle eco tone */
     --text-primary: #e0e8f0; /* Soft white for readability */
     --text-secondary: #a2b5c0; /* Light gray for secondary text */
-    --accent-primary: #ff6b35; /* Warm orange for energy, ATS keyword-friendly */
-    --accent-secondary: #40c4ff; /* Bright cyan for tech, ATS-friendly */
+    --accent-primary: #ff6b35; /* Vibrant orange, Nike-inspired for energy (ATS keyword-friendly) */
+    --accent-secondary: #40c4ff; /* Bright cyan, tech-inspired for contrast */
     --button-hover: #5ddcff; /* Light cyan for interactivity */
-    --shadow-color: rgba(255, 107, 53, 0.1); /* Soft orange shadow for focus */
+    --shadow-color: rgba(255, 107, 53, 0.2); /* Soft orange shadow for focus */
     --gauge-fill: #ff6b35; /* Orange for skill gauges, ATS-relevant */
-    --background-pattern: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(26, 42, 58, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill="%2340c4ff" fill-opacity="0.05"%3E%3Cpath d="M0 0h100v100H0z"/%3E%3Cpath d="M50 50h50v50H50z"/%3E%3Cpath d="M0 50h50v50H0z"/%3E%3Cpath d="M50 0h50v50H50z"/%3E%3C/g%3E%3C/svg%3E'); /* Subtle grid for tech appeal */
+    --background-pattern: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(26, 42, 58, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.05"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Subtle grid, Nike-like tech pattern */
     --layout-transform: none;
-    --card-radius: 8px; /* Clean, modern curves for mobile-first */
+    --card-radius: 12px; /* Sleek, Nike-inspired curves */
+    --animation-duration: 0.8s; /* Consistent animation speed */
 }
 
 [data-theme="light"] {
@@ -19,14 +20,14 @@
     --bg-secondary: #f5f7fa; /* Light gray for cards */
     --text-primary: #1a2a3a; /* Dark slate for contrast */
     --text-secondary: #718096; /* Medium gray for secondary text */
-    --accent-primary: #ff6b35; /* Warm orange */
+    --accent-primary: #ff6b35; /* Vibrant orange */
     --accent-secondary: #40c4ff; /* Bright cyan */
     --button-hover: #5ddcff; /* Light cyan for hover */
-    --shadow-color: rgba(255, 107, 53, 0.05); /* Softer orange shadow */
+    --shadow-color: rgba(255, 107, 53, 0.1); /* Softer orange shadow */
     --gauge-fill: #ff6b35; /* Orange for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 250, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/200/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill="%2340c4ff" fill-opacity="0.03"%3E%3Cpath d="M0 0h100v100H0z"/%3E%3Cpath d="M50 50h50v50H50z"/%3E%3Cpath d="M0 50h50v50H0z"/%3E%3Cpath d="M50 0h50v50H50z"/%3E%3C/g%3E%3C/svg%3E'); /* Lighter, subtle grid */
+    --background-pattern: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 250, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%2340c4ff" fill-opacity="0.03"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Lighter, subtle grid */
     --layout-transform: none;
-    --card-radius: 6px; /* Smaller curves for light mode */
+    --card-radius: 10px; /* Slightly smaller curves for light mode */
 }
 
 [data-theme="dark"] {
@@ -34,14 +35,14 @@
     --bg-secondary: #16222f; /* Darker slate for cards */
     --text-primary: #e0e8f0; /* Light gray for readability */
     --text-secondary: #8298a8; /* Medium gray for secondary text */
-    --accent-primary: #00ff88; /* Neon green for energy */
-    --accent-secondary: #a855f7; /* Purple for tech */
+    --accent-primary: #00ff88; /* Neon green, Nike-inspired energy */
+    --accent-secondary: #a855f7; /* Purple, tech-inspired contrast */
     --button-hover: #d8b4fe; /* Light purple for hover */
-    --shadow-color: rgba(0, 255, 136, 0.1); /* Soft green shadow */
+    --shadow-color: rgba(0, 255, 136, 0.2); /* Soft green shadow */
     --gauge-fill: #00ff88; /* Neon green for skill gauges */
-    --background-pattern: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 34, 47, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill="%23a855f7" fill-opacity="0.03"%3E%3Cpath d="M0 0h100v100H0z"/%3E%3Cpath d="M50 50h50v50H50z"/%3E%3Cpath d="M0 50h50v50H0z"/%3E%3Cpath d="M50 0h50v50H50z"/%3E%3C/g%3E%3C/svg%3E'); /* Darker, subtle grid */
+    --background-pattern: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 34, 47, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Cg fill="%23a855f7" fill-opacity="0.03"%3E%3Cpath d="M0 0h200v200H0z"/%3E%3Cpath d="M100 100h100v100H100z"/%3E%3Cpath d="M0 100h100v100H0z"/%3E%3Cpath d="M100 0h100v100H100z"/%3E%3C/g%3E%3C/svg%3E'); /* Darker, subtle grid */
     --layout-transform: none;
-    --card-radius: 10px; /* Larger curves for dark mode */
+    --card-radius: 14px; /* Larger curves for dark mode */
 }
 
 * {
@@ -62,7 +63,7 @@ body {
     line-height: 1.6; /* Improved readability for ATS */
 }
 
-/* Theme Toggle */
+/* Theme Toggle (Nike-Inspired, Minimal) */
 .theme-toggle {
     position: fixed;
     top: 15px;
@@ -86,12 +87,13 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #theme-btn:hover {
     background: var(--accent-secondary);
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-color);
 }
 
 .theme-indicator {
@@ -108,15 +110,21 @@ body {
     right: 45px;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .theme-indicator.active {
     opacity: 1;
     transform: translateX(0);
+    animation: slideIn 0.3s ease-out;
 }
 
-/* Navigation (Mobile-First, Simplified) */
+@keyframes slideIn {
+    from { transform: translateX(15px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Navigation (Mobile-First, Nike-Inspired) */
 .nav-bar {
     position: fixed;
     top: 0;
@@ -124,7 +132,8 @@ body {
     background: var(--bg-secondary);
     z-index: 1000;
     padding: 1rem 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
 }
 
 .nav-content {
@@ -142,11 +151,12 @@ body {
     color: var(--accent-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-logo .logo-text:hover {
     color: var(--accent-secondary);
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -165,7 +175,7 @@ body {
 
 .nav-link:hover, .nav-link.active {
     color: var(--accent-primary);
-    transform: translateY(-2px);
+    transform: scale(1.05) translateY(-2px);
 }
 
 .nav-link::after {
@@ -184,10 +194,10 @@ body {
 }
 
 .nav-indicator {
-    display: none; /* Removed for simplicity on mobile-first */
+    display: none; /* Removed for simplicity, Nike-inspired minimalism */
 }
 
-/* Hamburger Menu for Mobile */
+/* Hamburger Menu for Mobile (Nike-Inspired) */
 .hamburger {
     display: block; /* Visible on mobile */
     font-size: 1.5rem;
@@ -196,11 +206,12 @@ body {
     background: none;
     border: none;
     padding: 0.5rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .hamburger:hover {
     color: var(--accent-primary);
+    transform: scale(1.1);
 }
 
 .nav-menu {
@@ -211,16 +222,23 @@ body {
     width: 100%;
     background: var(--bg-secondary);
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .nav-menu.active {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: slideDown 0.3s ease-out;
 }
 
-/* Hero Section (Mobile-First, Attention-Grabbing) */
+@keyframes slideDown {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Hero Section (Nike-Inspired, Attention-Grabbing, Mobile-First) */
 .hero {
     background: transparent;
     position: relative;
@@ -243,8 +261,9 @@ body {
     z-index: 2;
     background: var(--bg-secondary);
     border-radius: var(--card-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero-text {
@@ -256,19 +275,19 @@ body {
     font-weight: 700;
     color: var(--accent-primary);
     opacity: 0;
-    animation: reveal 1.2s ease forwards;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1.2s ease-out forwards;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .reveal-text:nth-child(2) {
     font-size: 1.2rem; /* Mobile-first size */
     color: var(--text-secondary);
     margin: 0.8rem 0 1.2rem;
-    animation-delay: 0.4s;
+    animation: slideUp 1.2s ease-out 0.4s forwards;
 }
 
-@keyframes reveal {
-    0% { opacity: 0; transform: translateY(-20px); }
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
@@ -280,14 +299,19 @@ body {
     background: var(--bg-secondary);
     padding: 0.5rem 1rem;
     border-radius: var(--card-radius);
-    animation: marquee 15s linear infinite;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: marquee 15s linear infinite, pulseBg 3s infinite ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
 
 @keyframes marquee {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
+}
+
+@keyframes pulseBg {
+    0%, 100% { background: var(--bg-secondary); }
+    50% { background: rgba(64, 196, 255, 0.1); }
 }
 
 .cta-buttons {
@@ -310,14 +334,14 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     width: 100%; /* Full width on mobile */
 }
 
 .btn:hover {
     background: linear-gradient(45deg, var(--accent-secondary), var(--button-hover));
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px var(--shadow-color);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .hero-avatar {
@@ -327,6 +351,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    animation: float 4s infinite ease-in-out;
 }
 
 .hero-avatar img {
@@ -334,15 +359,15 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: var(--card-radius);
-    animation: pulse 3s infinite ease-in-out; /* Subtle pulse for portfolio style */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* Sections (Mobile-First, Simple) */
+/* Sections (Mobile-First, Nike-Inspired, Simple yet Dynamic) */
 .section {
     padding: 4rem 1rem; /* Mobile-first padding */
     max-width: 100%;
@@ -353,6 +378,12 @@ body {
     flex-direction: column;
     justify-content: center;
     transform: var(--layout-transform);
+    animation: fadeInSection 1s ease-out;
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .section-title {
@@ -363,16 +394,16 @@ body {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: fadeInDown 1s ease;
+    animation: slideInTitle 0.8s ease-out;
     background: var(--bg-secondary);
     padding: 0.8rem 1.5rem;
     border-radius: var(--card-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes slideInTitle {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 /* About */
@@ -380,8 +411,13 @@ body {
     background: var(--bg-secondary);
     padding: 1.5rem; /* Mobile-first padding */
     border-radius: var(--card-radius);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transform: rotate(-var(--layout-transform));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.8s ease-out;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .about-content p {
@@ -404,7 +440,8 @@ body {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, background 0.4s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-out;
 }
 
 .exp-card::before {
@@ -420,12 +457,13 @@ body {
 }
 
 .exp-card:hover::before {
-    opacity: 0.3; /* Subtle effect for simplicity */
+    opacity: 0.3; /* Subtle Nike-inspired glow */
 }
 
 .exp-card:hover {
-    transform: scale(1.02); /* Lighter scale for mobile */
-    background: rgba(64, 196, 255, 0.1); /* Cyan overlay for consistency */
+    transform: scale(1.05); /* Nike-inspired elevation */
+    background: rgba(64, 196, 255, 0.1); /* Cyan overlay, Nike-like */
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .exp-card h3 {
@@ -454,12 +492,18 @@ body {
     border-radius: var(--card-radius);
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 0.8s ease-out;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px); /* Simplified lift */
-    box-shadow: 0 3px 8px var(--shadow-color);
+    transform: scale(1.05) translateY(-5px); /* Nike-inspired lift */
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .skill-item h3 {
@@ -485,8 +529,8 @@ body {
     background: conic-gradient(var(--gauge-fill) 0% var(--level), #334155 0%);
     border-radius: 50%;
     clip-path: circle(50% at 50% 50%);
-    transition: all 1.2s ease-in-out; /* Faster for mobile */
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    transition: all 1.2s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 12px var(--gauge-fill, #ff6b35);
 }
 
 [data-theme="light"] .gauge-fill {
@@ -504,6 +548,7 @@ body {
     transform: translate(-50%, -50%) rotate(90deg);
     font-size: 0.8rem; /* Mobile-first size */
     color: var(--text-primary);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item ul {
@@ -528,25 +573,36 @@ body {
     background: var(--bg-secondary);
     padding: 1.5rem; /* Mobile-first padding */
     border-radius: var(--card-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background 0.4s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: slideRight 0.8s ease-out;
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
-    background: rgba(64, 196, 255, 0.1); /* Cyan overlay for consistency */
-    box-shadow: 0 3px 8px var(--shadow-color);
+    transform: scale(1.05); /* Nike-inspired elevation */
+    background: rgba(64, 196, 255, 0.1); /* Cyan overlay */
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+@keyframes slideRight {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 .cert-img {
     max-width: 150px; /* Mobile-first size */
     border-radius: var(--card-radius);
     margin-bottom: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cert-img:hover {
+    transform: scale(1.1);
 }
 
 .cert-card p {
@@ -572,12 +628,18 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     background: var(--bg-secondary);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 3px 8px var(--shadow-color);
+    transform: scale(1.05); /* Nike-inspired elevation */
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .project-img {
@@ -585,11 +647,12 @@ body {
     height: 60%;
     background-size: cover;
     background-position: center;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .project-card:hover .project-img {
     filter: blur(2px) brightness(0.7);
+    transform: scale(1.05);
 }
 
 .project-info {
@@ -605,11 +668,18 @@ body {
     font-size: 1.2rem; /* Mobile-first size */
     color: var(--accent-secondary);
     margin-bottom: 0.5rem;
+    animation: fadeInText 0.8s ease-out;
 }
 
 .project-teaser {
     font-size: 0.9rem; /* Mobile-first size */
     color: var(--text-secondary);
+    animation: fadeInText 0.8s ease-out 0.2s;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .project-details {
@@ -621,11 +691,18 @@ body {
 .project-card:hover .project-details {
     opacity: 1;
     transform: translateY(0);
+    animation: slideUpDetails 0.3s ease-out;
+}
+
+@keyframes slideUpDetails {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .project-details p {
     font-size: 0.9rem; /* Mobile-first size */
     margin-bottom: 0.8rem;
+    animation: fadeInText 0.8s ease-out 0.4s;
 }
 
 .project-link {
@@ -634,11 +711,13 @@ body {
     font-weight: 500;
     display: inline-block;
     font-size: 0.9rem; /* Mobile-first size */
+    transition: all 0.3s ease;
 }
 
 .project-link:hover {
     text-decoration: underline;
     color: var(--accent-secondary);
+    transform: scale(1.1);
 }
 
 /* Contact */
@@ -649,8 +728,9 @@ body {
     background: var(--bg-secondary);
     padding: 1.5rem; /* Mobile-first padding */
     border-radius: var(--card-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transform: rotate(-var(--layout-transform));
+    animation: fadeInSection 1s ease-out;
 }
 
 .contact-details {
@@ -668,12 +748,19 @@ body {
     background: var(--bg-secondary);
     padding: 0.5rem 0.8rem;
     border-radius: var(--card-radius);
-    box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: slideLeft 0.8s ease-out;
 }
 
 .contact-details p:hover {
-    transform: translateY(-2px);
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 .social-links {
@@ -681,6 +768,7 @@ body {
     gap: 1rem;
     margin-top: 1rem;
     justify-content: center;
+    animation: fadeIn 1s ease-out 0.2s;
 }
 
 .social-btn {
@@ -694,12 +782,13 @@ body {
     justify-content: center;
     font-size: 1.2rem; /* Mobile-first size */
     transition: all 0.3s ease;
-    box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .social-btn:hover {
     background: var(--accent-secondary);
     transform: scale(1.1);
+    box-shadow: 0 2px 6px var(--shadow-color);
 }
 
 .contact-form {
@@ -716,7 +805,8 @@ body {
     color: var(--text-primary);
     font-size: 1rem; /* Mobile-first size */
     transition: all 0.3s ease;
-    box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-out;
 }
 
 [data-theme="light"] .contact-form input,
@@ -734,11 +824,18 @@ body {
 
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: var(--accent-primary);
-    box-shadow: 0 0 8px var(--shadow-color), 0 0 3px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px var(--shadow-color), 0 0 4px rgba(255, 255, 255, 0.2);
     outline: none;
+    transform: scale(1.02);
+    animation: pulseInput 0.3s ease-out;
 }
 
-/* Desktop and Tablet Media Queries (Scaling Up) */
+@keyframes pulseInput {
+    0%, 100% { transform: scale(1.02); }
+    50% { transform: scale(1.04); }
+}
+
+/* Desktop and Tablet Media Queries (Scaling Up, Nike-Inspired) */
 @media (min-width: 769px) { /* Tablet and Desktop */
     .nav-bar {
         padding: 1.5rem 0;
@@ -749,12 +846,12 @@ body {
     }
 
     .nav-logo .logo-text {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .nav-links {
         display: flex; /* Show nav links on desktop/tablet */
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .hamburger {
@@ -772,7 +869,7 @@ body {
     .hero-content {
         flex-direction: row; /* Horizontal on desktop/tablet */
         padding: 2rem;
-        gap: 4rem;
+        gap: 6rem;
         max-width: 1200px;
     }
 
@@ -782,16 +879,16 @@ body {
     }
 
     .reveal-text {
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 
     .reveal-text:nth-child(2) {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .role-marquee {
         font-size: 1.5rem;
-        padding: 0.7rem 1.5rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .cta-buttons {
@@ -816,12 +913,12 @@ body {
     }
 
     .section-title {
-        font-size: 3rem;
-        padding: 1rem 2rem;
+        font-size: 3.5rem;
+        padding: 1rem 2.5rem;
     }
 
     .about-content {
-        padding: 2rem;
+        padding: 2.5rem;
     }
 
     .about-content p {
@@ -829,7 +926,7 @@ body {
     }
 
     .exp-container {
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .exp-card {
@@ -837,7 +934,7 @@ body {
     }
 
     .exp-card h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .exp-meta {
@@ -845,8 +942,8 @@ body {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Multiple columns on desktop */
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Multiple columns on desktop */
+        gap: 2.5rem;
     }
 
     .skill-item {
@@ -871,8 +968,8 @@ body {
     }
 
     .certificates-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Multiple columns on desktop */
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Multiple columns on desktop */
+        gap: 2.5rem;
     }
 
     .cert-card {
@@ -888,8 +985,8 @@ body {
     }
 
     .project-showcase {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Multiple columns on desktop */
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Multiple columns on desktop */
+        gap: 2.5rem;
     }
 
     .project-card {
@@ -910,13 +1007,13 @@ body {
 
     .contact-grid {
         grid-template-columns: 1fr 1fr; /* Two columns on desktop */
-        gap: 2rem;
-        padding: 2rem;
+        gap: 2.5rem;
+        padding: 2.5rem;
     }
 
     .contact-details p {
         font-size: 1.2rem;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1rem;
     }
 
     .social-btn {
