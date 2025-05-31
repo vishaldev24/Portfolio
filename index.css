@@ -1138,13 +1138,13 @@ body {
 [data-theme="light"] .contact-form textarea {
     background: #f5f7fa;
     border-color: #e2e8f0;
-    color: #1a2a3a;
+    color: #000000;
 }
 
 [data-theme="dark"] .contact-form input,
 [data-theme="dark"] .contact-form textarea {
-    background: #16222f;
-    border-color: #4a5568;
+    background: #000000;
+    border-color: #afaeae;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
